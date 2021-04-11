@@ -1,8 +1,9 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "second front project",
-  "main": "index.js",
+  "main": "gendiff",
   "scripts": {
     "test": "make test"
   },
