@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander/esm.mjs';
+import { getDiff } from '../lib/index.js';
 
 const program = new Command();
 program
@@ -10,6 +11,9 @@ program
     .description('Compares two configuration files and shows a difference.', {
       filepath1: 'path to the first file',
       filepath2: 'path to the second file'
+    })
+    .action((filepath1, filepath2, options, command) => {
+      getDiff(filepath1, filepath2);
     });
 
 program.parse(process.argv);
