@@ -10,6 +10,9 @@
   "engines": {
     "node": ">=14"
   },
+  "scripts": {
+    "test": "npx jest --bail"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrBertieWooster/frontend-project-lvl2.git"
@@ -18,6 +21,11 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mrBertieWooster/frontend-project-lvl2/issues"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "testRunner": "jest-circus/runner"
   },
   "homepage": "https://github.com/mrBertieWooster/frontend-project-lvl2#readme",
   "devDependencies": {
