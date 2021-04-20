@@ -8,6 +8,8 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => join(__dirname, '../', '__fixtures__', filename);
 const json1 = getFixturePath('file1.json');
 const json2 = getFixturePath('file2.json');
+const yml1 = getFixturePath('file1.yml');
+const yml2 = getFixturePath('file2.yml');
 const incorrectFile = getFixturePath('json1.txt');
 const correctResult = `{
   - follow: false
@@ -18,10 +20,18 @@ const correctResult = `{
   + verbose: true
 }`;
 
-test('getting file difference', () => {
+test('getting json difference', () => {
   expect(getDiff(json1, json2)).toBe(correctResult);
 });
 
-test('catching exception', () => {
-  expect(() => getDiff(json1, incorrectFile)).toThrow();
+test('getting yaml difference', () => {
+  expect(getDiff(yml1, yml2)).toBe(correctResult);
+});
+
+test('check incorrect extension', () => {
+  expect(() => getDiff(json1, incorrectFile)).toThrow('unsupported file extension');
+});
+
+test('check empty file', () => {
+  expect(() => getDiff(json1, '')).toThrow();
 });
