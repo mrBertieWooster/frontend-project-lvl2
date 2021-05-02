@@ -6,7 +6,7 @@ import getDiff from '../lib/index.js';
 const program = new Command();
 program
   .version('1.0.0', '-V, --version', 'output the version number')
-  .option('-f, --format [type]', 'output format')
+  .option('-f, --format [type]', 'output format [type]', 'stylish')
   .arguments('<filepath1> <filepath2>')
   .description('Compares two configuration files and shows a difference.', {
     filepath1: 'path to the first file',
