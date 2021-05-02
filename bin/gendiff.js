@@ -12,8 +12,7 @@ program
     filepath1: 'path to the first file',
     filepath2: 'path to the second file',
   })
-  .action((filepath1, filepath2, options, command) => {
-    console.log(getDiff(filepath1, filepath2));
-  });
-
-program.parse(process.argv);
+  .action((filepath1, filepath2) => {
+    console.log(getDiff(filepath1, filepath2, program.format));
+  })
+  .parse(process.argv);
