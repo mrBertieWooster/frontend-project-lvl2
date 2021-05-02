@@ -1,9 +1,13 @@
 const plain = (diff) => {
-  const keys = Object.keys(diff);
-  const result = keys.reduce((acc, key) => {
-    
-  }, '');
-  return result;
+  const iter = (node, path) => {
+    const keys = Object.keys(node);
+    const result = node.map((elem) => {
+      const curPath = `${path}.${key}`;
+      switch ()
+    }, '');
+    return result;
+  };
+  return iter(diff, '');
 };
 
 export default plain;
