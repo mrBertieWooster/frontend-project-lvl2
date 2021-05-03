@@ -1,8 +1,8 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "0.3.12",
   "type": "module",
-  "description": "second front project",
+  "description": "get difference between two files",
   "main": "lib/index.js",
   "scripts": {
     "test": "npx jest --bail"

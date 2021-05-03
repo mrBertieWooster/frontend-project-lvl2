@@ -11,7 +11,7 @@ Clone repository and return
 $ make install
 ```
 
-code supports file types: `yaml`, `yml`, `json`
+code supports file types: `yaml`, `yml`, `json` and works with relative and absolute paths
 * `$ gendiff before.json after.json` get diff in default format
 * `$ gendiff before.yml after.yml --format json` get diff in JSON format
 * `$ gendiff before.yml after.yml --format plain` get diff in plain format
