@@ -1,6 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/mrBertieWooster/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/mrBertieWooster/frontend-project-lvl2/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/a2e2abfe4a395d994320/maintainability)](https://codeclimate.com/github/mrBertieWooster/frontend-project-lvl2/maintainability)
+
 Get difference between two files
 ======================
 
