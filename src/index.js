@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import parser from './parsers.js';
-import render from './formatters.js';
+import render from './formatters/index.js';
 
 const getUniqueKeys = (obj1, obj2) => {
   if (_.isObject(obj1) && _.isObject(obj2)) {
