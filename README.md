@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/mrBertieWooster/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/mrBertieWooster/frontend-project-lvl2/actions)
 
-Diff JSON files
+Get difference between two files
 ======================
 
 # Installation
