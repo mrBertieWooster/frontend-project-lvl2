@@ -1,9 +1,14 @@
 import _ from 'lodash';
 
-const isStr = (value) => value instanceof String ? `'${value}'` : value;
+const isStr = (value) => {
+  if (typeof value === "string") {
+    return `'${value}'`
+  }
+  return value
+};
 
 const checkObject = (value) => {
-  const result = _.isObject(value) ? '[complex value]' : `${isStr(value)}`;
+  const result = _.isObject(value) ? '[complex value]' : isStr(value);
   return result;
 };
 
