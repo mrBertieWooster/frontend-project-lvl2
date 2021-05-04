@@ -1,9 +1,12 @@
 {
   "name": "@hexlet/code",
-  "version": "0.3.12",
+  "version": "0.3.18",
   "type": "module",
   "description": "get difference between two files",
   "main": "src/index.js",
+  "bin": {
+    "gendiff": "src/bin/gendiff.js"
+  },
   "scripts": {
     "test": "npx jest --bail"
   },
