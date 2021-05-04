@@ -6,9 +6,7 @@ const added = '+';
 const tabulation = '    ';
 const currentTab = (deepLevel) => tabulation.repeat(deepLevel);
 
-const isEmptyStr = (str) => str !== '' ? ` ${str}` : str;
-
-const toString = (key, value, sign, deep) => `${currentTab(deep).substr(2)}${sign} ${key}:${isEmptyStr(value)}`;
+const toString = (key, value, sign, deep) => `${currentTab(deep).substr(2)}${sign} ${key}: ${value}`;
 
 const objToString = (value, deep) => {
   const objAsIs = (obj, deepLevel) => {
