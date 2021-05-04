@@ -1,6 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/mrBertieWooster/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/mrBertieWooster/frontend-project-lvl2/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a2e2abfe4a395d994320/maintainability)](https://codeclimate.com/github/mrBertieWooster/frontend-project-lvl2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a2e2abfe4a395d994320/test_coverage)](https://codeclimate.com/github/mrBertieWooster/frontend-project-lvl2/test_coverage)
 
 Get difference between two files
 ======================
