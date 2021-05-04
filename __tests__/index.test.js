@@ -15,12 +15,12 @@ const incorrectFile = getFixturePath('json1.txt');
 const correctResultJson = readFileSync(getFixturePath('correct_diff.json'), 'utf-8');
 const correctResultPlain = readFileSync(getFixturePath('correct_plain'), 'utf-8');
 
-test('getting json difference', () => {
-  expect(getDiff(json1, json2)).toBe(correctResultJson);
-});
-
 test('getting yaml difference', () => {
   expect(getDiff(yml1, yml2)).toBe(correctResultJson);
+});
+
+test('getting json difference', () => {
+  expect(getDiff(json1, json2)).toBe(correctResultJson);
 });
 
 test('getting json difference plain', () => {
