@@ -1,13 +1,16 @@
 import _ from 'lodash';
 
+const isStr = (value) => value instanceof String ? `'${value}'` : value;
+
 const checkObject = (value) => {
-  const result = _.isObject(value) ? '[complex value]' : value;
+  const result = _.isObject(value) ? '[complex value]' : `${isStr(value)}`;
   return result;
 };
 
 const plain = (diff) => {
   const iter = (node, path) => {
-    const result = node.flatMap((elem) => {
+    const filteredNode = node.filter((elem) => elem.type !== 'unchanged');
+    const result = filteredNode.flatMap((elem) => {
       const newPath = path === '' ? elem.name : `${path}.${elem.name}`;
       switch (elem.type) {
         case 'nested': {
@@ -19,11 +22,11 @@ const plain = (diff) => {
         case 'deleted': {
           return `Property '${newPath}' was removed`;
         }
-        case 'modified': {
+        case 'changed': {
           return `Property '${newPath}' was updated. From ${checkObject(elem.old)} to ${checkObject(elem.new)}`;
         }
         default:
-          return `Property '${newPath}' was unchanged`;
+          throw new Error(`Unsupported element type ${elem.type}`);
       }
     }, '');
     return result.join('\n');
