@@ -1,13 +1,15 @@
 import _ from 'lodash';
+// import sort from 'lodash/fp';
 import parser from './parsers.js';
 import render from './formatters/index.js';
 
 const getUniqueKeys = (obj1, obj2) => {
   if (_.isObject(obj1) && _.isObject(obj2)) {
-    return [..._.union(Object.keys(obj1), Object.keys(obj2))].sort();
+    const unionArrays = _.concat(Object.keys(obj1), Object.keys(obj2));
+    return _.sortedUniq(_.sortBy(unionArrays));
   }
-  if (_.isObject(obj1)) return _.sortedUniq(Object.keys(obj1).sort());
-  return _.sortedUniq(Object.keys(obj2).sort());
+  if (_.isObject(obj1)) return _.sortedUniq(_.sortBy(Object.keys(obj1)));
+  return _.sortedUniq(_.sortBy(Object.keys(obj2)));
 };
 
 const makeDiff = (file1, file2) => {
