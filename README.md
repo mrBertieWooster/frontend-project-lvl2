@@ -7,7 +7,7 @@ Get difference between two files
 
 # Installation
 
-Clone repository and return
+Clone repository and install
 ```sh
 $ make install
 ```
