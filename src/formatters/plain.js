@@ -1,10 +1,10 @@
 import _ from 'lodash';
 
 const isStr = (value) => {
-  if (typeof value === "string") {
-    return `'${value}'`
+  if (typeof value === 'string') {
+    return `'${value}'`;
   }
-  return value
+  return value;
 };
 
 const checkObject = (value) => {
