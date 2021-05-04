@@ -48,7 +48,7 @@ const stylish = (ast) => {
   const iter = (tree, deepLevel) => {
     const processedTree = tree.flatMap((elem) => format(elem, iter, deepLevel + 1));
     const result = processedTree.join('\n');
-    return deepLevel === 0 ? `{\n${result}\n${currentTab(deepLevel)}}\n` : `{\n${result}\n${currentTab(deepLevel)}}`;
+    return deepLevel === 0 ? `{\n${result}\n${currentTab(deepLevel)}}` : `{\n${result}\n${currentTab(deepLevel)}}`;
   };
   return iter(ast, 0);
 };
